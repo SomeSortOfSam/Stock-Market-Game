@@ -9,8 +9,8 @@ public class OpeningMenu : MonoBehaviour
 
     public void Start()
     {
-        currentMenu = transform.GetChild(0).gameObject;
-        for (int i = 1; i < transform.childCount; i++)
+        currentMenu = transform.GetChild(1).gameObject;
+        for (int i = 2; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
