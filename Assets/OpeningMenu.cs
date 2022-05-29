@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OpeningMenu : MonoBehaviour
 {
     private GameObject currentMenu;
     public Toggle moneyToggle;
-    public InputField moneyField;
+    public TMP_InputField moneyField;
     public Toggle timeToggle;
-    public InputField timeField;
+    public TMP_InputField timeField;
 
     public void Start()
     {
@@ -30,12 +31,20 @@ public class OpeningMenu : MonoBehaviour
 
     public void ToggleMoneyVictory(bool value)
     {
-
+        moneyField.interactable = value;
+        if (timeToggle.isOn == value)
+        {
+            timeToggle.isOn = !value;
+        }
     }
 
     public void ToggleTimeVictory(bool value)
     {
-
+        timeField.interactable = value;
+        if (moneyToggle.isOn == value)
+        {
+            moneyToggle.isOn = !value;
+        }
     }
 
     public void Quit() { Application.Quit(); }
