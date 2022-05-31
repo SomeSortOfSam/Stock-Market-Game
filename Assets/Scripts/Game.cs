@@ -3,21 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game
+public partial class Game
 {
-    public enum Stock
+    private const int maximumMarketIndex = 29;
+    public int marketIndex
     {
-        None,
-        Alcoa,
-        AmericanMotors,
-        JICase,
-        GeneralMills,
-        IntShoe,
-        Maytag,
-        WesternPubl,
-        Woolworth
+        set => _marketIndex = ClampMarketIndex(value);
+        get => _marketIndex;
     }
-    public struct Square
+    private int _marketIndex;
+    public class Square
     {
         public bool forward;
         public int stockChange;
@@ -30,6 +25,19 @@ public class Game
 
     }
     private IPlayer[] players;
+
+    private int ClampMarketIndex(int value)
+    {
+        if (value > maximumMarketIndex)
+        {
+            return ClampMarketIndex(maximumMarketIndex - (value - maximumMarketIndex));
+        }
+        else if (value < 0)
+        {
+            return ClampMarketIndex(-value);
+        }
+        return value;
+    }
 
     private Tuple<int, int> RollDice()
     {

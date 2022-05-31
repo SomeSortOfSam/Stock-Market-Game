@@ -21,11 +21,10 @@ The aristocrat of money games
       - [ ] Squares that are not start squares with a fee escape to the right
     - [ ] Squares 5 squares away from start squares have a sell all command
     - [ ] Squares 3 squares away from start squares have a stockholder meeting
-- [ ] Stock price shall be defined by the Market Index
-  - [ ] A stock will be defined by a name, a minimum price, a polarity, and an index multiplier
-  - [ ] A stock may be sold by the active player for a price defined by the formula: Minimum price + (Index Multiplier * (Market Index if polarity else (Maximum Market Index - Market Index))
-  - [ ] Half of all stocks will have a negative polarity
-  - [ ] If the Market Index goes above the Maximum Market Index or below 0, the signed out of bounds portion will be subtracted from the Index
+- [x] Stock price shall be defined by the Market Index
+  - [x] A stock will be defined by a name, a minimum price, a polarity, and an index multiplier
+  - [x] The current price of a stock shall be defined by the formula  Minimum price + (Index Multiplier * (Market Index if polarity else (Maximum Market Index - Market Index))
+  - [x] If the Market Index goes above the Maximum Market Index or below 0, the signed out of bounds portion will be subtracted from the Index
   - [ ] Whenever a player lands on a square with a stock vector, the vector shall be added to the Market Index.
 - [ ] Whenever a player lands on a square with a stockholder entrance, if they own that squares stock on their next turn, they will enter the stockholder meeting
   - [ ] Players may only buy one stock at an entrance.

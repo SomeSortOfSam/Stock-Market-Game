@@ -7,7 +7,8 @@ using UnityEngine;
 public class SaveGame
 {
     [Serializable]
-    public struct PlayerState {
+    public struct PlayerState
+    {
         [Serializable]
         public enum Job { }
 
@@ -21,5 +22,5 @@ public class SaveGame
     }
 
     public PlayerState[] players;
-    public int stockIndex;
+    public int marketIndex;
 }
