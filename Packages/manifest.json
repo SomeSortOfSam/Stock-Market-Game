@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.consulo.ide": "https://github.com/consulo/UnityEditorConsuloPlugin.git#2.6.0",
+    "com.cratesmith.assetui": "https://github.com/Cratesmith/Cratesmith.AssetUI.git",
     "com.unity.collab-proxy": "1.15.16",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.14",
