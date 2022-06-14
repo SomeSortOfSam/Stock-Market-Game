@@ -19,4 +19,8 @@ public class Lobby : MonoBehaviour {
     private void StartLobby() {
 
     }
+
+    public void ChooseProfession(int professionIndex){
+
+    }
 }

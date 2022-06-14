@@ -13,7 +13,7 @@ public class OpeningMenu : MonoBehaviour {
     public TMP_InputField timeField;
 
     /// <summary>
-    /// Turns off all menus but the top level one when the canvas is loaded in. May need to be removed when animations are added
+    /// Unity method. Turns off all menus but the top level one when the canvas is loaded in. May need to be removed when animations are added
     /// </summary>
     public void Start() {
         currentMenu = transform.GetChild(1).gameObject;
@@ -52,5 +52,10 @@ public class OpeningMenu : MonoBehaviour {
         GameObject lobbyObject = transform.GetChild(transform.childCount - 1).gameObject;
         SwitchToMenu(lobbyObject);
         Lobby lobby = lobbyObject.GetComponent<Lobby>();
+        if (timeToggle.isOn) {
+            lobby.StartLobby(float.Parse(timeField.text));
+        } else {
+            lobby.StartLobby(int.Parse(moneyField.text));
+        }
     }
 }
