@@ -7,23 +7,81 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382795089914550609, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4008730193756453452, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
       propertyPath: m_Name
       value: Scuba Diver
       objectReference: {fileID: 0}
     - target: {fileID: 4251317619611677129, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251317619611677129, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251317619611677129, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251317619611677129, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5734246275645806554, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
       propertyPath: m_text
-      value: 'Scuba Diver
-
-        5 and 9'
+      value: "Diver\n 5 and 9"
       objectReference: {fileID: 0}
     - target: {fileID: 5734246275645806554, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 27.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874510096455987600, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8072681309548436978, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
       propertyPath: m_Pivot.x
