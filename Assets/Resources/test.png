@@ -1,0 +1,14 @@
+{
+    "professions": [
+        {
+            "name": "Bees",
+            "resourcePath": "Bee",
+            "professionIndex": 0
+        },
+        {
+            "name": "Trees",
+            "resourcePath": "Tree",
+            "professionIndex": 1
+        }
+    ]
+}

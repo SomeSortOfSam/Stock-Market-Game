@@ -1,0 +1,24 @@
+{
+  "professions" :[
+    {
+      "name": "Police",
+      "resourcePath": "vectors/proffesions/police",
+      "professionIndex": 0
+    },
+    {
+      "name": "Doctor",
+      "resourcePath": "vectors/proffesions/police",
+      "professionIndex": 1
+    },
+    {
+      "name": "Miner",
+      "resourcePath": "vectors/proffesions/police",
+      "professionIndex": 2
+    },
+    {
+      "name": "Diver",
+      "resourcePath": "vectors/proffesions/police",
+      "professionIndex": 3
+    }
+  ]
+}
