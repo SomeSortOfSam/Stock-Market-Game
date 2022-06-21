@@ -64,13 +64,8 @@ public class Lobby : MonoBehaviour {
     }
 
     private void StartLobby() {
-        ProfessionsWrapper professions = new ProfessionsWrapper(new Profession[]{new Profession("Bees", "Bee", 0),new Profession("Trees", "Tree", 1)});
-        StreamWriter writer = new StreamWriter("Assets/Resources/test.png");
-        writer.Write(JsonUtility.ToJson(professions,true));
-        writer.Close();
-
         TextAsset professionsJson = (TextAsset) Resources.Load("Proffesions");
-        professions = JsonUtility.FromJson<ProfessionsWrapper>(professionsJson.text);
+        ProfessionsWrapper professions = JsonUtility.FromJson<ProfessionsWrapper>(professionsJson.text);
         foreach (Profession profession in professions){
             GameObject button = GameObject.Instantiate(professionButtonTemplate);
             button.transform.SetParent(professionButtonContainer);
