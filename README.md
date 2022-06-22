@@ -19,8 +19,8 @@ The aristocrat of money games
       - [ ] Start squares have a fee of $100
       - [ ] Squares that are not start squares with a fee have a fee of $10 per share the player owns
       - [ ] Squares that are not start squares with a fee escape to the right
-    - [ ] Squares 5 squares away from start squares have a sell all command
-    - [ ] Squares 3 squares away from start squares have a stockholder meeting
+    - [ ] Squares 1 square away from fee squares that are not start squares have a sell all command
+    - [ ] Squares equidistant from adjacent fee squares have a stockholder meeting
 - [x] Stock price shall be defined by the Market Index
   - [x] A stock will be defined by a name, a minimum price, a polarity, and an index multiplier
   - [x] The current price of a stock shall be defined by the formula  Minimum price + (Index Multiplier * (Market Index if polarity else (Maximum Market Index - Market Index))
