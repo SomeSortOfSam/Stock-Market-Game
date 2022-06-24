@@ -2,19 +2,19 @@
   "professions" :[
     {
       "name": "Police",
-      "resourcePath": "vectors/proffesions/police",
+      "resourcePath": "vectors/proffesions/police"
     },
     {
       "name": "Doctor",
-      "resourcePath": "vectors/proffesions/police",
+      "resourcePath": "vectors/proffesions/police"
     },
     {
       "name": "Miner",
-      "resourcePath": "vectors/proffesions/police",
+      "resourcePath": "vectors/proffesions/police"
     },
     {
       "name": "Diver",
-      "resourcePath": "vectors/proffesions/police",
+      "resourcePath": "vectors/proffesions/police"
     }
   ]
 }

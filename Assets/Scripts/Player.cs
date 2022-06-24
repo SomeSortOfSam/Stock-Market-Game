@@ -3,43 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IPlayer
+namespace StockMarketGame
 {
-    void OnPreDiceRoll(GameManager game);
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="game"></param>
-    void OnDiceRoll(GameManager game, System.Tuple<int, int> roll);
-    void OnPostDiceRoll(GameManager game);
-    void SetRollingPlayer(GameManager game, bool isRoller);
-    int GetSquareIndex();
-}
-
-public class LocalPlayer : IPlayer
-{
-    public int GetSquareIndex()
+    internal interface IPlayer
     {
-        throw new NotImplementedException();
+        void OnPreDiceRoll(Game game);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="game"></param>
+        void OnDiceRoll(Game game, System.Tuple<int, int> roll);
+        void OnPostDiceRoll(Game game);
+        void SetRollingPlayer(Game game, bool isRoller);
+        int GetSquareIndex();
     }
 
-    public void OnDiceRoll(GameManager game, Tuple<int, int> roll)
+    internal class LocalPlayer : IPlayer
     {
-        throw new NotImplementedException();
-    }
+        public int GetSquareIndex()
+        {
+            throw new NotImplementedException();
+        }
 
-    public void OnPostDiceRoll(GameManager game)
-    {
-        throw new System.NotImplementedException();
-    }
+        public void OnDiceRoll(Game game, Tuple<int, int> roll)
+        {
+            throw new NotImplementedException();
+        }
 
-    public void OnPreDiceRoll(GameManager game)
-    {
-        throw new System.NotImplementedException();
-    }
+        public void OnPostDiceRoll(Game game)
+        {
+            throw new System.NotImplementedException();
+        }
 
-    public void SetRollingPlayer(GameManager game, bool isRoller)
-    {
-        throw new System.NotImplementedException();
+        public void OnPreDiceRoll(Game game)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetRollingPlayer(Game game, bool isRoller)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

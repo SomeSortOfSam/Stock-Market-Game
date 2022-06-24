@@ -6,73 +6,66 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class Lobby : MonoBehaviour
+namespace StockMarketGame
 {
-    [Header("Player GUIs")]
-    public TMP_InputField aiPlayerInputField;
-    public TextMeshProUGUI hostingText;
-    public GameObject localPlayersContainer;
-    public GameObject onlinePlayersContainer;
-    [Header("Proffession GUIs")]
-    public GameObject professionButtonTemplate;
-    public Transform professionButtonContainer;
-
-    [Serializable]
-    class ProfessionsWrapper : object
+    public class Lobby : Context
     {
-        public Profession[] professions;
-    }
+        [Header("Player GUIs")]
+        public TMP_InputField aiPlayerInputField;
+        public TextMeshProUGUI hostingText;
+        public GameObject localPlayersContainer;
+        public GameObject onlinePlayersContainer;
+        [Header("Proffession GUIs")]
+        public GameObject professionButtonTemplate;
+        public Transform professionButtonContainer;
 
-    [Serializable]
-    class Profession : object
-    {
-        [SerializeField]
-        string name;
-        [SerializeField]
-        string resourcePath;
-
-        public Sprite GetIcon()
+        [Serializable]
+        class ProfessionsWrapper : object
         {
-            GameObject sprite = (GameObject)Resources.Load(resourcePath);
-            return sprite.GetComponent<SpriteRenderer>().sprite;
+            [SerializeField]
+            public Profession[] professions;
         }
 
-        public string GetText(int index)
+        [Serializable]
+        class Profession : object
         {
-            return name + "\n" + index + " or " + (12 - index);
+            [SerializeField]
+            string name;
+            [SerializeField]
+            string resourcePath;
+
+            public Sprite GetIcon()
+            {
+                GameObject sprite = (GameObject)Resources.Load(resourcePath);
+                return sprite.GetComponent<SpriteRenderer>().sprite;
+            }
+
+            public string GetText(int index, int maxIndex, Board board)
+            {
+                string output = name + "\n";
+                output += (index + 2) + " or " + (12 - index) + "\n";
+                Debug.Log(board.jobMultipler + "," + index + "," + maxIndex);
+                output += "$" + (board.jobMultipler * ((maxIndex - index) + 1));
+                return output;
+            }
         }
-    }
 
-    public void StartLobby(int moneyWinCondition)
-    {
-        StartLobby();
-    }
-
-    public void StartLobby(float timeWinCondition)
-    {
-        StartLobby();
-    }
-
-    private void StartLobby()
-    {
-        CreateJobButtons();
-    }
-
-    private void CreateJobButtons()
-    {
-        TextAsset professionsJson = (TextAsset)Resources.Load("Professions");
-        ProfessionsWrapper professions = JsonUtility.FromJson<ProfessionsWrapper>(professionsJson.text);
-        for (int i = 0; i < professions.professions.Length; i++)
+        public override void OnTickerTapeAnimationFinished(Game game)
         {
-            GameObject button = GameObject.Instantiate(professionButtonTemplate);
-            button.transform.SetParent(professionButtonContainer);
-            button.GetComponentInChildren<Image>().sprite = professions.professions[i].GetIcon();
-            button.GetComponentInChildren<TextMeshProUGUI>().text = professions.professions[i].GetText(i);
+            CreateJobButtons(game.board);
         }
-    }
 
-    public void ChooseProfession(int professionIndex)
-    {
-
+        private void CreateJobButtons(Board board)
+        {
+            TextAsset professionsJson = (TextAsset)Resources.Load("Professions");
+            ProfessionsWrapper professions = JsonUtility.FromJson<ProfessionsWrapper>(professionsJson.text);
+            for (int i = 0; i < professions.professions.Length; i++)
+            {
+                GameObject button = Instantiate(professionButtonTemplate);
+                button.transform.SetParent(professionButtonContainer);
+                button.GetComponentInChildren<Image>().sprite = professions.professions[i].GetIcon();
+                button.GetComponentInChildren<TextMeshProUGUI>().text = professions.professions[i].GetText(i, professions.professions.Length, board);
+            }
+        }
     }
 }

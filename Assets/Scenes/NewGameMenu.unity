@@ -613,9 +613,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1713076337}
-        m_TargetAssemblyTypeName: Context, Game
-        m_MethodName: RequestSceneChange
-        m_Mode: 5
+        m_TargetAssemblyTypeName: StockMarketGame.NewGameMenu, Game
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2682,9 +2682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tickerTapeTargetTransform: {fileID: 716311733}
-  requestSceneChangeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   moneyToggle: {fileID: 1506299992}
   moneyField: {fileID: 199083604}
   timeToggle: {fileID: 1897823833}

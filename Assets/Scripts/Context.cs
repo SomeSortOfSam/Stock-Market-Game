@@ -4,27 +4,38 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class Context : MonoBehaviour
+namespace StockMarketGame
 {
-    public RectTransform tickerTapeTargetTransform;
-
-    public UnityEvent<string> requestSceneChangeEvent;
-
-    public void Start()
+    public class Context : MonoBehaviour
     {
-        if (tickerTapeTargetTransform.TryGetComponent(out Image image))
+        [Header("Game Manager Context")]
+        public RectTransform tickerTapeTargetTransform;
+
+        private UnityEvent<string> requestSceneChangeEvent = new UnityEvent<string>();
+
+        public void Start()
         {
-            image.enabled = false;
+            if (tickerTapeTargetTransform.TryGetComponent(out Image image))
+            {
+                image.enabled = false;
+            }
         }
-    }
 
-    public void RequestSceneChange(string requestedSceneName)
-    {
-        requestSceneChangeEvent.Invoke(requestedSceneName);
-    }
+        public virtual void SubscribeToEvents(GameManager subscriber)
+        {
+            requestSceneChangeEvent.AddListener(subscriber.OnSceneChangeRequested);
+        }
 
-    public void Quit()
-    {
-        Application.Quit();
+        public virtual void OnTickerTapeAnimationFinished(Game game) { }
+
+        public void RequestSceneChange(string requestedSceneName)
+        {
+            requestSceneChangeEvent.Invoke(requestedSceneName);
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
     }
 }
