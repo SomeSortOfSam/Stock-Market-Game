@@ -5,10 +5,13 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 
-namespace Tests {
-    public class StockTests {
+namespace Tests
+{
+    public class StockTests
+    {
         [Test]
-        public void TestPolarity() {
+        public void TestPolarity()
+        {
             Stock stockA = new Stock("Stock A", 5, 5, false);
             Stock stockB = new Stock("Stock B", 5, 5, true);
 
@@ -16,8 +19,9 @@ namespace Tests {
         }
 
         [Test]
-        public void TestMarketIndexOutOfBounds() {
-            Game game = new Game(500, new IPlayer[] {});
+        public void TestMarketIndexOutOfBounds()
+        {
+            Game game = new Game(500, new IPlayer[] { });
             game.marketIndex = 29;
             Assert.AreEqual(29, game.marketIndex, 0, "Indexes at the end of the tape are valid");
             game.marketIndex = 30;

@@ -5,14 +5,14 @@ using UnityEngine;
 
 public interface IPlayer
 {
-    void OnPreDiceRoll(Game game);
+    void OnPreDiceRoll(GameManager game);
     /// <summary>
     /// 
     /// </summary>
     /// <param name="game"></param>
-    void OnDiceRoll(Game game, System.Tuple<int, int> roll);
-    void OnPostDiceRoll(Game game);
-    void SetRollingPlayer(Game game, bool isRoller);
+    void OnDiceRoll(GameManager game, System.Tuple<int, int> roll);
+    void OnPostDiceRoll(GameManager game);
+    void SetRollingPlayer(GameManager game, bool isRoller);
     int GetSquareIndex();
 }
 
@@ -23,22 +23,22 @@ public class LocalPlayer : IPlayer
         throw new NotImplementedException();
     }
 
-    public void OnDiceRoll(Game game, Tuple<int, int> roll)
+    public void OnDiceRoll(GameManager game, Tuple<int, int> roll)
     {
         throw new NotImplementedException();
     }
 
-    public void OnPostDiceRoll(Game game)
+    public void OnPostDiceRoll(GameManager game)
     {
         throw new System.NotImplementedException();
     }
 
-    public void OnPreDiceRoll(Game game)
+    public void OnPreDiceRoll(GameManager game)
     {
         throw new System.NotImplementedException();
     }
 
-    public void SetRollingPlayer(Game game, bool isRoller)
+    public void SetRollingPlayer(GameManager game, bool isRoller)
     {
         throw new System.NotImplementedException();
     }
