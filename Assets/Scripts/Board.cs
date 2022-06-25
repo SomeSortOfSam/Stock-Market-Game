@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace StockMarketGame
@@ -6,23 +7,17 @@ namespace StockMarketGame
     [Serializable]
     public struct Board
     {
-        [SerializeField]
-        private int startingMoney;
-        [SerializeField]
-        public int jobMultipler { get; private set; }
-        [SerializeField]
-        private int maximumMarketIndex;
-        [SerializeField]
-        private int startFee;
-        [SerializeField]
-        private int fee;
+        public int startingMoney;
+        public int jobMultipler;
+        public int maximumMarketIndex;
+        public int startFee;
+        public int fee;
 
-        [SerializeField]
-        private Stock[] stocks;
-        [SerializeField]
-        private int[][] stockholderSquares;
-        [SerializeField]
-        private Square[][] squares;
+        public Stock[] stocks;
+        public int stockholderSquaresLength;
+        public int[] stockholderSquares;
+        public int startToCornerDistance;
+        public Square[] squares;
 
         [Serializable]
         public struct Square

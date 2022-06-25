@@ -85,9 +85,8 @@ namespace StockMarketGame
             changer.anchorMin = Vector2.Lerp(changer.anchorMin, target.anchorMin, percent);
             changer.offsetMax = Vector2.Lerp(changer.offsetMax, target.offsetMax, percent);
             changer.offsetMin = Vector2.Lerp(changer.offsetMin, target.offsetMin, percent);
-            changer.pivot = Vector2.Lerp(changer.pivot, target.pivot, percent);
             changer.rotation = Quaternion.Lerp(changer.rotation, target.rotation, percent);
-
+            changer.pivot = target.pivot;
         }
 
 

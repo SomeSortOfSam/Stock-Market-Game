@@ -44,8 +44,7 @@ namespace StockMarketGame
             {
                 string output = name + "\n";
                 output += (index + 2) + " or " + (12 - index) + "\n";
-                Debug.Log(board.jobMultipler + "," + index + "," + maxIndex);
-                output += "$" + (board.jobMultipler * ((maxIndex - index) + 1));
+                output += "$" + (board.jobMultipler * ((maxIndex - index)));
                 return output;
             }
         }

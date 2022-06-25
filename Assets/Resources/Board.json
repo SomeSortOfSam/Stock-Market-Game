@@ -19,239 +19,212 @@
 			"marketIndexMultiplier": 4
 		}
 	],
-	"maxiumMarketIndex": 29,
+	"maximumMarketIndex": 29,
 	"startFee": 100,
 	"fee": 10,
-	"stockholderSquares": [
-		[
-			1,2,1,2,3,2,1,2,1
-		],
-		[
-			1,2,3,2,3,2,3,2,1
-		],
-		[
-			1,2,3,2,1,2,3,2,1
-		],
-		[
-			1,3,2,3,2,3,2,3,1
-		]
-	],
+	"stockholderSquaresLength": 9,
+	"stockholderSquares": [1,2,1,2,3,2,1,2,1,1,2,3,2,3,2,3,2,1,1,2,3,2,1,2,3,2,1,1,3,2,3,2,3,2,3,1],
+	"startToCornerDistance": 5,
 	"squares" : [
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 5,
-				"stockVector": 1
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 3,
-				"stockVector": -2
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 0,
-				"stockVector": 3
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 1,
-				"stockVector": -4
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 7,
-				"stockVector": 5
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 5,
-				"stockVector": -5
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 3,
-				"stockVector": 4
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 2,
-				"stockVector": -3
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 1,
-				"stockVector": 2
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 0,
-				"stockVector": -1
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 7,
-				"stockVector": -1
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 6,
-				"stockVector": 2
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 5,
-				"stockVector": -3
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 4,
-				"stockVector": 4
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 2,
-				"stockVector": -5
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 6,
-				"stockVector": 5
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 0,
-				"stockVector": -4
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 1,
-				"stockVector": 3
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 5,
-				"stockVector": -2
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 3,
-				"stockVector": 1
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 4,
-				"stockVector": 1
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 2,
-				"stockVector": -2
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 6,
-				"stockVector": 3
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 7,
-				"stockVector": -4
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 1,
-				"stockVector": 5
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 4,
-				"stockVector": -5
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 5,
-				"stockVector": 4
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 3,
-				"stockVector": -3
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 0,
-				"stockVector": 2
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 1,
-				"stockVector": -1
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 6,
-				"stockVector": -1
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 7,
-				"stockVector": 2
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 4,
-				"stockVector": -3
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 2,
-				"stockVector": 4
-			},
-			{
-				"directionIsRight": true,
-				"stockIndex": 3,
-				"stockVector": -5
-			}	
-		],
-		[
-			{
-				"directionIsRight": false,
-				"stockIndex": 0,
-				"stockVector": 5
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 6,
-				"stockVector": -4
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 7,
-				"stockVector": 3
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 4,
-				"stockVector": -2
-			},
-			{
-				"directionIsRight": false,
-				"stockIndex": 2,
-				"stockVector": 1
-			}	
-		]
+		{
+			"directionIsRight": false,
+			"stockIndex": 5,
+			"stockVector": 1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 3,
+			"stockVector": -2
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 0,
+			"stockVector": 3
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 1,
+			"stockVector": -4
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 7,
+			"stockVector": 5
+		}	,
+		{
+			"directionIsRight": false,
+			"stockIndex": 5,
+			"stockVector": -5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 3,
+			"stockVector": 4
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 2,
+			"stockVector": -3
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 1,
+			"stockVector": 2
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 0,
+			"stockVector": -1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 7,
+			"stockVector": -1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 6,
+			"stockVector": 2
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 5,
+			"stockVector": -3
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 4,
+			"stockVector": 4
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 2,
+			"stockVector": -5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 6,
+			"stockVector": 5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 0,
+			"stockVector": -4
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 1,
+			"stockVector": 3
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 5,
+			"stockVector": -2
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 3,
+			"stockVector": 1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 4,
+			"stockVector": 1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 2,
+			"stockVector": -2
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 6,
+			"stockVector": 3
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 7,
+			"stockVector": -4
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 1,
+			"stockVector": 5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 4,
+			"stockVector": -5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 5,
+			"stockVector": 4
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 3,
+			"stockVector": -3
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 0,
+			"stockVector": 2
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 1,
+			"stockVector": -1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 6,
+			"stockVector": -1
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 7,
+			"stockVector": 2
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 4,
+			"stockVector": -3
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 2,
+			"stockVector": 4
+		},
+		{
+			"directionIsRight": true,
+			"stockIndex": 3,
+			"stockVector": -5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 0,
+			"stockVector": 5
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 6,
+			"stockVector": -4
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 7,
+			"stockVector": 3
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 4,
+			"stockVector": -2
+		},
+		{
+			"directionIsRight": false,
+			"stockIndex": 2,
+			"stockVector": 1
+		}	
 	]
 }
