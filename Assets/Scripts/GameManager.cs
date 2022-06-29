@@ -81,8 +81,8 @@ namespace StockMarketGame
 
         private static void LerpRectTransform(RectTransform changer, RectTransform target, float percent)
         {
-            changer.anchorMax = Vector2.Lerp(changer.anchorMax, target.anchorMax, percent);
-            changer.anchorMin = Vector2.Lerp(changer.anchorMin, target.anchorMin, percent);
+            changer.anchorMax = new Vector2(1, Mathf.Lerp(changer.anchorMax.y, target.anchorMax.y, percent));
+            changer.anchorMin = new Vector2(0, Mathf.Lerp(changer.anchorMin.y, target.anchorMin.y, percent));
             changer.offsetMax = Vector2.Lerp(changer.offsetMax, target.offsetMax, percent);
             changer.offsetMin = Vector2.Lerp(changer.offsetMin, target.offsetMin, percent);
             changer.rotation = Quaternion.Lerp(changer.rotation, target.rotation, percent);

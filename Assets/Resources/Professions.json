@@ -6,15 +6,15 @@
     },
     {
       "name": "Doctor",
-      "resourcePath": "vectors/proffesions/police"
+      "resourcePath": "vectors/proffesions/doctor"
     },
     {
       "name": "Miner",
-      "resourcePath": "vectors/proffesions/police"
+      "resourcePath": "vectors/proffesions/miner"
     },
     {
       "name": "Diver",
-      "resourcePath": "vectors/proffesions/police"
+      "resourcePath": "vectors/proffesions/diver"
     }
   ]
 }
