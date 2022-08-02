@@ -9,7 +9,7 @@ namespace StockMarketGame
 {
     public class GameManager : MonoBehaviour
     {
-        const int TICKER_TAPE_ANIMATION_FRAME_LEGTH = 24;
+        const int TICKER_TAPE_ANIMATION_FRAME_LEGTH = 24 * 2;
 
         [SerializeField]
         private RectTransform tikerTape;
@@ -70,6 +70,7 @@ namespace StockMarketGame
         {
             if (currentContext.tickerTapeTargetTransform != null)
             {
+                tikerTape.pivot = currentContext.tickerTapeTargetTransform.pivot;
                 for (int i = 0; i < TICKER_TAPE_ANIMATION_FRAME_LEGTH; i++)
                 {
                     LerpRectTransform(tikerTape, currentContext.tickerTapeTargetTransform, (float)i / TICKER_TAPE_ANIMATION_FRAME_LEGTH);
@@ -86,7 +87,6 @@ namespace StockMarketGame
             changer.offsetMax = Vector2.Lerp(changer.offsetMax, target.offsetMax, percent);
             changer.offsetMin = Vector2.Lerp(changer.offsetMin, target.offsetMin, percent);
             changer.rotation = Quaternion.Lerp(changer.rotation, target.rotation, percent);
-            changer.pivot = target.pivot;
         }
 
 

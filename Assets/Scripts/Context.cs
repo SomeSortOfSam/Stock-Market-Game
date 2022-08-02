@@ -13,7 +13,7 @@ namespace StockMarketGame
 
         private UnityEvent<string> requestSceneChangeEvent = new UnityEvent<string>();
 
-        public void Start()
+        public virtual void Start()
         {
             if (tickerTapeTargetTransform.TryGetComponent(out Image image))
             {
