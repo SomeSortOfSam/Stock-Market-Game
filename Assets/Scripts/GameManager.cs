@@ -89,7 +89,11 @@ namespace StockMarketGame
             changer.rotation = Quaternion.Lerp(changer.rotation, target.rotation, percent);
         }
 
-
+        internal void OnStartGameRequested(IEnumerable<IPlayer> players)
+        {
+            currentGame.players.AddRange(players);
+            OnSceneChangeRequested("AtWork");
+        }
     }
 
     public class Game
@@ -100,16 +104,16 @@ namespace StockMarketGame
         private Optional<int> valueWinCondition;
         private Optional<float> timeWinCondition;
 
-        internal List<IPlayer> players;
+        internal List<IPlayer> players = new List<IPlayer>();
 
         internal Game(int valueWinCondition) : this()
         {
-            this.valueWinCondition = new Optional<int>(valueWinCondition);
+            this.valueWinCondition = valueWinCondition;
         }
 
         internal Game(float timeWinCondition) : this()
         {
-            this.timeWinCondition = new Optional<float>(timeWinCondition);
+            this.timeWinCondition = timeWinCondition;
         }
 
         private Game()

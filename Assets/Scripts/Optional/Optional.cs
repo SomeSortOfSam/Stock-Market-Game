@@ -16,4 +16,8 @@ public struct Optional<T>
         enabled = true;
         value = initialValue;
     }
+
+    public static implicit operator Optional<T>(T t) => new Optional<T>(t);
+    public static implicit operator T(Optional<T> t) => t.value;
+    public static implicit operator bool(Optional<T> t) => t.enabled;
 }

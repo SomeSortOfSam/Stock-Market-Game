@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Events;
 
 namespace StockMarketGame
 {
@@ -21,6 +22,8 @@ namespace StockMarketGame
         [SerializeField]
         private RectTransform hostingOptionsContainer;
         public bool onHostMachine = true;
+
+        private UnityEvent<IEnumerable<IPlayer>> RequestStartGameEvent = new UnityEvent<IEnumerable<IPlayer>>();
 
         [Serializable]
         class ProfessionsWrapper : object
@@ -115,12 +118,25 @@ namespace StockMarketGame
         public void OnAIAdded()
         {
             int randi = UnityEngine.Random.Range(0, professionButtonContainer.childCount);
-            professionButtonContainer.GetChild(randi).GetComponent<ProffesionButton>().AddPlayer(ProffesionButton.PlayerType.AI);
+            professionButtonContainer.GetChild(randi).GetComponent<ProffesionButton>().AddPlayer(PlayerFactory.PlayerType.AI);
         }
 
         public void OnStartGame()
         {
-            throw new NotImplementedException();
+            List<IPlayer> players = new List<IPlayer>();
+            for (int i = 0; i < professionButtonContainer.childCount; i++)
+            {
+                Transform child = professionButtonContainer.GetChild(i);
+                IEnumerable<IPlayer> buttonPlayers = child.GetComponent<ProffesionButton>().GetPlayers();
+                players.AddRange(buttonPlayers);
+            }
+            RequestStartGameEvent.Invoke(players);
+        }
+
+        public override void SubscribeToEvents(GameManager subscriber)
+        {
+            base.SubscribeToEvents(subscriber);
+            RequestStartGameEvent.AddListener(subscriber.OnStartGameRequested);
         }
 
     }

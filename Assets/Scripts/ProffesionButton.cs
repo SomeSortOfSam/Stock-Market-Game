@@ -12,7 +12,7 @@ namespace StockMarketGame
         [SerializeField]
         private Transform playerIconHolder;
 
-        public enum PlayerType { Hotseat, AI, Online }
+
 
         // Start is called before the first frame update
         void Start()
@@ -23,29 +23,36 @@ namespace StockMarketGame
 
         private void AddPlayer()
         {
-            AddPlayer(PlayerType.Hotseat);
+            AddPlayer(PlayerFactory.PlayerType.Hotseat);
         }
 
-        public void AddPlayer(PlayerType playerType)
+        internal void AddPlayer(PlayerFactory.PlayerType playerType)
         {
             GameObject image = new GameObject(playerType.ToString() + playerIconHolder.childCount, typeof(Image), typeof(AspectRatioFitter));
             image.transform.SetParent(playerIconHolder);
             GameObject template = (GameObject)Resources.Load("vectors/" + playerType.ToString());
             Sprite texture = template.GetComponent<SpriteRenderer>().sprite;
-            if (image.TryGetComponent<Image>(out Image sprite)) {
+            if (image.TryGetComponent(out Image sprite))
+            {
                 sprite.sprite = texture;
                 sprite.useSpriteMesh = true;
+                sprite.color = PlayerFactory.colors[++PlayerFactory.lastPlayerIndex];
             }
-            if (TryGetComponent<AspectRatioFitter>(out AspectRatioFitter fitter))
+            if (TryGetComponent(out AspectRatioFitter fitter))
             {
                 fitter.aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
                 fitter.aspectRatio = .6f;
             }
         }
 
-        internal IPlayer[] GetPlayers()
+        internal IEnumerable<IPlayer> GetPlayers()
         {
-            throw new NotImplementedException();
+            List<IPlayer> players = new List<IPlayer>();
+            for (int i = 0; i < playerIconHolder.childCount; i++)
+            {
+                players.Add(PlayerFactory.GetPlayer(playerIconHolder.GetChild(i).gameObject.name));
+            }
+            return players;
         }
 
     }
