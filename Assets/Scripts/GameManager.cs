@@ -27,8 +27,9 @@ namespace StockMarketGame
             {
                 throw new ApplicationException("Boostrap could not be loaded");
             }
-
             DontDestroyOnLoad(game);
+
+            SceneManager.LoadScene(0); //Load main menu, even in the editor
         }
 
         private void Start()

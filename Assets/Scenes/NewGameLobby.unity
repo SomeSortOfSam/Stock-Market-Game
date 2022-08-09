@@ -675,7 +675,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.4
+  m_fontSize: 35.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -985,10 +985,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tickerTapeTargetTransform: {fileID: 4255415309415631739}
-  professionButtonTemplate: {fileID: 4008730193756453452, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
-  professionButtonContainer: {fileID: 496695904}
+  professionTemplate: {fileID: 4008730193756453452, guid: b36b41e3cc3a461fca8e3f177371e568, type: 3}
+  professionContainer: {fileID: 496695904}
   hostingText: {fileID: 258523851}
   hostingOptionsContainer: {fileID: 820310287}
+  onHostMachine: 1
 --- !u!1 &1772782543
 GameObject:
   m_ObjectHideFlags: 0

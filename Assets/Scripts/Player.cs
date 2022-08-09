@@ -7,11 +7,8 @@ namespace StockMarketGame
 {
     internal interface IPlayer
     {
+        int GetJobIndex();
         void OnPreDiceRoll(Game game);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="game"></param>
         void OnDiceRoll(Game game, System.Tuple<int, int> roll);
         void OnPostDiceRoll(Game game);
         void SetRollingPlayer(Game game, bool isRoller);
@@ -36,7 +33,7 @@ namespace StockMarketGame
 
         public enum PlayerType { Hotseat, AI, Online }
 
-        internal static IPlayer GetPlayer(string nameAndIndex)
+        internal static IPlayer GetPlayer(string nameAndIndex, int proffesionIndex)
         {
             while (int.TryParse(nameAndIndex[nameAndIndex.Length - 1].ToString(), out int result))
             {
@@ -46,7 +43,7 @@ namespace StockMarketGame
             switch (playerType)
             {
                 case PlayerType.Hotseat:
-                    return new LocalPlayer();
+                    return new LocalPlayer(proffesionIndex);
                 case PlayerType.AI:
                 case PlayerType.Online:
                 default:
@@ -57,6 +54,13 @@ namespace StockMarketGame
 
     internal class LocalPlayer : IPlayer
     {
+        public LocalPlayer(int jobIndex)
+        {
+            this.jobIndex = jobIndex;
+        }
+
+        private int jobIndex = 0;
+        public int GetJobIndex() => jobIndex;
         public int GetSquareIndex()
         {
             throw new NotImplementedException();

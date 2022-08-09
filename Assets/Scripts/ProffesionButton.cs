@@ -12,9 +12,6 @@ namespace StockMarketGame
         [SerializeField]
         private Transform playerIconHolder;
 
-
-
-        // Start is called before the first frame update
         void Start()
         {
             Button button = GetComponent<Button>();
@@ -50,7 +47,8 @@ namespace StockMarketGame
             List<IPlayer> players = new List<IPlayer>();
             for (int i = 0; i < playerIconHolder.childCount; i++)
             {
-                players.Add(PlayerFactory.GetPlayer(playerIconHolder.GetChild(i).gameObject.name));
+                Transform proffesion = playerIconHolder.GetChild(i);
+                players.Add(PlayerFactory.GetPlayer(proffesion.gameObject.name, transform.GetSiblingIndex()));
             }
             return players;
         }
