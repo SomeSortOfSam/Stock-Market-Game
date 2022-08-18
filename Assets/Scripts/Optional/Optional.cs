@@ -11,6 +11,11 @@ public struct Optional<T>
     public bool Enabled => enabled;
     public T Value => value;
 
+    public Optional(bool enabled, T initialValue)
+    {
+        this.enabled = enabled;
+        value = initialValue;
+    }
     public Optional(T initialValue)
     {
         enabled = true;

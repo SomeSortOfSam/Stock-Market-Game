@@ -38,5 +38,9 @@ namespace StockMarketGame
             [SerializeField]
             private int marketIndexMultiplier;
         }
+
+        public int JobIndexToMoney(int index, int maxIndex) => jobMultipler * (maxIndex - index);
+
+        public Tuple<int, int> JobIndexToAcceptedRolls(int index) => new(index + 2, 12 - index);
     }
 }

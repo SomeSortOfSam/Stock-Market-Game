@@ -5,17 +5,34 @@ using UnityEngine;
 
 namespace StockMarketGame
 {
-    internal interface IPlayer
+    public abstract class Player
     {
-        int GetJobIndex();
-        void OnPreDiceRoll(Game game);
-        void OnDiceRoll(Game game, System.Tuple<int, int> roll);
-        void OnPostDiceRoll(Game game);
-        void SetRollingPlayer(Game game, bool isRoller);
-        int GetSquareIndex();
+        protected bool atWork = true;
+        public int jobIndex
+        {
+            get;
+            protected set;
+        }
+        public int cash
+        {
+            get;
+            protected set;
+        }
+
+        public int GetMonataryValue()
+        {
+            return cash;
+        }
+
+        public abstract void OnPreDiceRoll(Game game);
+        public abstract void OnDiceRoll(Game game, Tuple<int, int> roll);
+        public abstract void OnPostDiceRoll(Game game);
+        public abstract void SetRollingPlayer(Game game, bool isRoller);
+        public abstract int GetSquareIndex();
+
     }
 
-    internal static class PlayerFactory
+    public static class PlayerFactory
     {
         public static int lastPlayerIndex = -1;
 
@@ -33,7 +50,7 @@ namespace StockMarketGame
 
         public enum PlayerType { Hotseat, AI, Online }
 
-        internal static IPlayer GetPlayer(string nameAndIndex, int proffesionIndex)
+        internal static Player GetPlayer(string nameAndIndex, int proffesionIndex)
         {
             while (int.TryParse(nameAndIndex[nameAndIndex.Length - 1].ToString(), out int result))
             {
@@ -52,39 +69,95 @@ namespace StockMarketGame
         }
     }
 
-    internal class LocalPlayer : IPlayer
+    public class LocalPlayer : Player
     {
         public LocalPlayer(int jobIndex)
         {
             this.jobIndex = jobIndex;
+            Debug.Log(atWork);
         }
 
-        private int jobIndex = 0;
-        public int GetJobIndex() => jobIndex;
-        public int GetSquareIndex()
+        public override int GetSquareIndex()
         {
             throw new NotImplementedException();
         }
 
-        public void OnDiceRoll(Game game, Tuple<int, int> roll)
+        public override void OnDiceRoll(Game game, Tuple<int, int> roll)
+        {
+            if (atWork)
+            {
+                Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
+                if (jobRolls.Item1 == roll.Item1 || jobRolls.Item1 == roll.Item2 || jobRolls.Item2 == roll.Item1 || jobRolls.Item2 == roll.Item2)
+                {
+                    cash += game.board.JobIndexToMoney(jobIndex, 4);
+                }
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override void OnPostDiceRoll(Game game)
         {
             throw new NotImplementedException();
         }
 
-        public void OnPostDiceRoll(Game game)
+        public override void OnPreDiceRoll(Game game)
         {
             throw new NotImplementedException();
         }
 
-        public void OnPreDiceRoll(Game game)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetRollingPlayer(Game game, bool isRoller)
+        public override void SetRollingPlayer(Game game, bool isRoller)
         {
             throw new NotImplementedException();
         }
     }
 
+    public class AIPlayer : Player
+    {
+        public AIPlayer(int jobIndex)
+        {
+            this.jobIndex = jobIndex;
+        }
+
+        public override int GetSquareIndex()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void OnDiceRoll(Game game, Tuple<int, int> roll)
+        {
+            if (atWork)
+            {
+                Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
+                int rollValue = roll.Item1 + roll.Item2;
+                if (jobRolls.Item1 == rollValue || jobRolls.Item2 == rollValue)
+                {
+                    cash += game.board.JobIndexToMoney(jobIndex, 4);
+                }
+            }
+            else
+            {
+                //throw new NotImplementedException();
+            }
+        }
+
+        public override void OnPostDiceRoll(Game game)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public override void OnPreDiceRoll(Game game)
+        {
+            if (atWork && cash > 1000) {
+                atWork = false;
+            }
+        }
+
+        public override void SetRollingPlayer(Game game, bool isRoller)
+        {
+            //throw new NotImplementedException();
+        }
+    }
 }

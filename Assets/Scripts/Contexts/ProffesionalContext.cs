@@ -41,8 +41,9 @@ namespace StockMarketGame
             public string GetText(int index, int maxIndex, Board board)
             {
                 string output = name + "\n";
-                output += (index + 2) + " or " + (12 - index) + "\n";
-                output += "$" + (board.jobMultipler * ((maxIndex - index)));
+                Tuple<int, int> acceptedRolls = board.JobIndexToAcceptedRolls(index);
+                output += acceptedRolls.Item1 + " or " + acceptedRolls.Item2 + "\n";
+                output += "$" + board.JobIndexToMoney(index, maxIndex);
                 return output;
             }
         }
@@ -88,12 +89,12 @@ namespace StockMarketGame
             professionContainer.anchorMin = Vector2.zero;
         }
 
-        private void PopulateProffesions(IEnumerable<IPlayer> players)
+        private void PopulateProffesions(IEnumerable<Player> players)
         {
             PlayerFactory.lastPlayerIndex = -1;
-            foreach (IPlayer player in players)
+            foreach (Player player in players)
             {
-                ProffesionButton proffesionButton = professionContainer.GetChild(player.GetJobIndex()).GetComponent<ProffesionButton>();
+                ProffesionButton proffesionButton = professionContainer.GetChild(player.jobIndex).GetComponent<ProffesionButton>();
                 Type type = player.GetType();
                 if (type == typeof(LocalPlayer))
                 {

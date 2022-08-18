@@ -42,9 +42,9 @@ namespace StockMarketGame
             }
         }
 
-        internal IEnumerable<IPlayer> GetPlayers()
+        internal IEnumerable<Player> GetPlayers()
         {
-            List<IPlayer> players = new List<IPlayer>();
+            List<Player> players = new();
             for (int i = 0; i < playerIconHolder.childCount; i++)
             {
                 Transform proffesion = playerIconHolder.GetChild(i);

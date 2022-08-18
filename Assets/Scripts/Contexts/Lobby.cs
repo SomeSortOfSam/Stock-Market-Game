@@ -18,7 +18,7 @@ namespace StockMarketGame
         private RectTransform hostingOptionsContainer;
         public bool onHostMachine = true;
 
-        private UnityEvent<IEnumerable<IPlayer>> RequestStartGameEvent = new UnityEvent<IEnumerable<IPlayer>>();
+        private UnityEvent<IEnumerable<Player>> RequestStartGameEvent = new UnityEvent<IEnumerable<Player>>();
 
 
         public override void Start()
@@ -58,11 +58,11 @@ namespace StockMarketGame
 
         public void OnStartGame()
         {
-            List<IPlayer> players = new List<IPlayer>();
+            List<Player> players = new List<Player>();
             for (int i = 0; i < professionContainer.childCount; i++)
             {
                 Transform child = professionContainer.GetChild(i);
-                IEnumerable<IPlayer> buttonPlayers = child.GetComponent<ProffesionButton>().GetPlayers();
+                IEnumerable<Player> buttonPlayers = child.GetComponent<ProffesionButton>().GetPlayers();
                 players.AddRange(buttonPlayers);
             }
             RequestStartGameEvent.Invoke(players);
