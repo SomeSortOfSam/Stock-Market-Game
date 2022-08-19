@@ -93,7 +93,7 @@ namespace StockMarketGame
         internal void OnStartGameRequested(IEnumerable<Player> players)
         {
             currentGame.players.AddRange(players);
-            OnSceneChangeRequested("AtWork");
+            OnSceneChangeRequested("BoardVeiw");
         }
     }
 }

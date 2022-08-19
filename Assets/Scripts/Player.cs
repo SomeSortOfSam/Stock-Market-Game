@@ -18,7 +18,7 @@ namespace StockMarketGame
             get;
             protected set;
         }
-
+        public int squareIndex;
         public int GetMonataryValue()
         {
             return cash;
@@ -79,6 +79,7 @@ namespace StockMarketGame
                 case PlayerType.Hotseat:
                     return new LocalPlayer(proffesionIndex);
                 case PlayerType.AI:
+                    return new AIPlayer(proffesionIndex);
                 case PlayerType.Online:
                 default:
                     throw new NotImplementedException();
@@ -91,7 +92,6 @@ namespace StockMarketGame
         public LocalPlayer(int jobIndex)
         {
             this.jobIndex = jobIndex;
-            Debug.Log(atWork);
         }
 
         public override int GetSquareIndex()

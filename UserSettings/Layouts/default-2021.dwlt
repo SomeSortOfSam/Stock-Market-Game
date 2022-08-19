@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1280
     height: 941
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Console
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 594
     width: 916
     height: 297
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 21
+  controlID: 60
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 8096}
   vertical: 0
-  controlID: 150
+  controlID: 99
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 87
+  controlID: 797
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -292,14 +292,14 @@ MonoBehaviour:
     y: 0
     width: 364
     height: 891
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,22 +341,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Scripts/Contexts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Scripts/Contexts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Youtube&Deviantart\Documents\GitHub\Stock-Market-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6600000
-    m_LastClickedID: 24774
-    m_ExpandedIDs: 00000000be60000000ca9a3b
+    m_SelectedIDs: 26660000
+    m_LastClickedID: 26150
+    m_ExpandedIDs: 00000000c2600000d060000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -384,7 +384,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be600000
+    m_ExpandedIDs: 00000000c2600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,15 +415,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300007676000060640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AIGameInteractionTests
-      m_OriginalName: AIGameInteractionTests
+      m_Name: BoardVeiw
+      m_OriginalName: BoardVeiw
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24890
+      m_UserData: 26162
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -471,9 +471,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 661a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: e6dbffffacdcffff72ddffffd2dfffff0ce0ffffd4e0ffff2ee4ffff14e5ffffc2e5ffff9ae6ffff64e7ffffa4e7ffff6ee8ffffaee8fffff8ecffff26fbffff
+      m_ExpandedIDs: a4daffffcadaffff28dbffffeadbffff2addfffff0ddffffb6deffff7cdfffff42e0ffff82e0ffffc2e0ffff0ce2ffffd2e2ffff98e3ffffd8e3ffff9ee4ffff76e5ffffd0e6ffffa8e7ffff5ce9ffff36eaffff18ebffffdeebffff2eecffffe8ecffffbeedffff34efffff84efffff9ef0ffff9af3ffff66f9ffff26fbfffff6650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -964,9 +964,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 678
+    x: 916
     y: 73
-    width: 601
+    width: 363
     height: 870
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 194
+    ID: 149
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1080,9 +1080,9 @@ MonoBehaviour:
       uniqueId: '[Stock-Market-Game][suite]'
       name: Stock-Market-Game
       fullName: Stock-Market-Game
-      resultStatus: 1
-      duration: 0.1371437
-      messages: 
+      resultStatus: 2
+      duration: 0.1262854
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1096,9 +1096,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0823871
-      messages: 
+      resultStatus: 2
+      duration: 0.0723996
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1108,13 +1108,13 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Stock-Market-Game][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][AIGameInteractionTests][suite]
-      name: AIGameInteractionTests
-      fullName: AIGameInteractionTests
-      resultStatus: 1
-      duration: 0.0783551
-      messages: 
+    - id: 1004
+      uniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+      name: BoardSetupTests
+      fullName: BoardSetupTests
+      resultStatus: 2
+      duration: 0.0685561
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1122,14 +1122,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1006
       parentUniqueId: '[Tests][C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/AIGameInteractionTests/[Tests][AIGameInteractionTests.AIGainsMoneyOnTurnFromJob]
-      name: AIGainsMoneyOnTurnFromJob
-      fullName: AIGameInteractionTests.AIGainsMoneyOnTurnFromJob
+    - id: 1007
+      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.BoardHasExpectedFeeSquares]
+      name: BoardHasExpectedFeeSquares
+      fullName: BoardSetupTests.BoardHasExpectedFeeSquares
       resultStatus: 1
-      duration: 0.0012746
+      duration: 0.0313533
       messages: 
       output: 
       stacktrace: 
@@ -1139,14 +1139,35 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][AIGameInteractionTests][suite]
-    - id: 1003
-      uniqueId: Tests.dll/AIGameInteractionTests/[Tests][AIGameInteractionTests.AILeavesJobWhenAtMoneyCap]
-      name: AILeavesJobWhenAtMoneyCap
-      fullName: AIGameInteractionTests.AILeavesJobWhenAtMoneyCap
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+    - id: 1008
+      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.BoardHasExpectedStockholderSquares]
+      name: BoardHasExpectedStockholderSquares
+      fullName: BoardSetupTests.BoardHasExpectedStockholderSquares
+      resultStatus: 2
+      duration: 0.0329154
+      messages: "  At 33\r\n  Expected: instance of <StockMarketGame.Board+StockholderSquare>\r\n 
+        But was:  <StockMarketGame.Board+StartSquare>\r\n"
+      output: 
+      stacktrace: 'at BoardSetupTests.BoardHasExpectedStockholderSquares () [0x00006]
+        in C:\Users\Youtube&Deviantart\Documents\GitHub\Stock-Market-Game\Assets\Tests\BoardSetupTests.cs:40
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+    - id: 1006
+      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.BoardHasValidNumberOfSquares]
+      name: BoardHasValidNumberOfSquares
+      fullName: BoardSetupTests.BoardHasValidNumberOfSquares
       resultStatus: 1
-      duration: 0.0448806
+      duration: 0.0143587
       messages: 
       output: 
       stacktrace: 
@@ -1156,14 +1177,48 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][AIGameInteractionTests][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
-      name: BoardSetupTests
-      fullName: BoardSetupTests
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+    - id: 1009
+      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.CornerSquaresExitRight]
+      name: CornerSquaresExitRight
+      fullName: BoardSetupTests.CornerSquaresExitRight
       resultStatus: 1
-      duration: 0.004676
+      duration: 0.0030552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+    - id: 1010
+      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.StartSquaresExitLeftOnEvenRightOnOdd]
+      name: StartSquaresExitLeftOnEvenRightOnOdd
+      fullName: BoardSetupTests.StartSquaresExitLeftOnEvenRightOnOdd
+      resultStatus: 1
+      duration: 0.00163
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
+      name: GenaricPlayerGameInteractionTests
+      fullName: GenaricPlayerGameInteractionTests
+      resultStatus: 1
+      duration: 0.0140734
       messages: 
       output: 
       stacktrace: 
@@ -1174,12 +1229,12 @@ MonoBehaviour:
       categories: []
       parentId: 1006
       parentUniqueId: '[Tests][C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1005
-      uniqueId: Tests.dll/BoardSetupTests/[Tests][BoardSetupTests.JobIndexReturnsNormalMoneyValues]
-      name: JobIndexReturnsNormalMoneyValues
-      fullName: BoardSetupTests.JobIndexReturnsNormalMoneyValues
+    - id: 1002
+      uniqueId: Tests.dll/GenaricPlayerGameInteractionTests/[Tests][GenaricPlayerGameInteractionTests.GainsMoneyOnTurnFromJob]
+      name: GainsMoneyOnTurnFromJob
+      fullName: GenaricPlayerGameInteractionTests.GainsMoneyOnTurnFromJob
       resultStatus: 1
-      duration: 0.0009763
+      duration: 0.0028781
       messages: 
       output: 
       stacktrace: 
@@ -1189,15 +1244,54 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][BoardSetupTests][suite]
-    m_ResultText: AILeavesJobWhenAtMoneyCap (0.045s)
-    m_ResultStacktrace: 
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
+    - id: 1004
+      uniqueId: Tests.dll/GenaricPlayerGameInteractionTests/[Tests][GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart]
+      name: GoesInCorrectDirectionOnGameStart
+      fullName: GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart
+      resultStatus: 1
+      duration: 0.0003964
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
+    - id: 1003
+      uniqueId: Tests.dll/GenaricPlayerGameInteractionTests/[Tests][GenaricPlayerGameInteractionTests.LeavesJobWhenAtMoneyCap]
+      name: LeavesJobWhenAtMoneyCap
+      fullName: GenaricPlayerGameInteractionTests.LeavesJobWhenAtMoneyCap
+      resultStatus: 1
+      duration: 0.0038388
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
+    m_ResultText: "BoardHasExpectedStockholderSquares (0.033s)\n---\nAt 33\r\n  Expected:
+      instance of <StockMarketGame.Board+StockholderSquare>\r\n  But was:  <StockMarketGame.Board+StartSquare>\n---\nat
+      BoardSetupTests.BoardHasExpectedStockholderSquares () [0x00006] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Tests\\BoardSetupTests.cs:40"
+    m_ResultStacktrace: 'at BoardSetupTests.BoardHasExpectedStockholderSquares ()
+      [0x00006] in C:\Users\Youtube&Deviantart\Documents\GitHub\Stock-Market-Game\Assets\Tests\BoardSetupTests.cs:40
+
+'
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c35125f
-      m_LastClickedID: 1595028892
-      m_ExpandedIDs: 93438bb2e4c934e1e557abf7a747acfad5a14c099abb11141079351c0f644020c38a4244151f1057ffffff7f
+      m_SelectedIDs: 7e40ad0c
+      m_LastClickedID: 212680830
+      m_ExpandedIDs: 93438bb2e4c934e1e557abf7a747acfad5a14c099abb1114e8c848181079351c0f644020c38a4244151f1057ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
