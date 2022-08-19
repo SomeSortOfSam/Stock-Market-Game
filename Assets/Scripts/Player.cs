@@ -25,7 +25,24 @@ namespace StockMarketGame
         }
 
         public abstract void OnPreDiceRoll(Game game);
-        public abstract void OnDiceRoll(Game game, Tuple<int, int> roll);
+
+        public void OnDiceRoll(Game game, Tuple<int, int> roll)
+        {
+            if (atWork)
+            {
+                Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
+                int rollValue = roll.Item1 + roll.Item2;
+                if (jobRolls.Item1 == rollValue || jobRolls.Item2 == rollValue)
+                {
+                    cash += game.board.JobIndexToMoney(jobIndex, 4);
+                }
+            }
+            else
+            {
+                //throw new NotImplementedException();
+            }
+        }
+
         public abstract void OnPostDiceRoll(Game game);
         public abstract void SetRollingPlayer(Game game, bool isRoller);
         public abstract int GetSquareIndex();
@@ -82,22 +99,6 @@ namespace StockMarketGame
             throw new NotImplementedException();
         }
 
-        public override void OnDiceRoll(Game game, Tuple<int, int> roll)
-        {
-            if (atWork)
-            {
-                Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
-                if (jobRolls.Item1 == roll.Item1 || jobRolls.Item1 == roll.Item2 || jobRolls.Item2 == roll.Item1 || jobRolls.Item2 == roll.Item2)
-                {
-                    cash += game.board.JobIndexToMoney(jobIndex, 4);
-                }
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public override void OnPostDiceRoll(Game game)
         {
             throw new NotImplementedException();
@@ -126,22 +127,7 @@ namespace StockMarketGame
             throw new NotImplementedException();
         }
 
-        public override void OnDiceRoll(Game game, Tuple<int, int> roll)
-        {
-            if (atWork)
-            {
-                Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
-                int rollValue = roll.Item1 + roll.Item2;
-                if (jobRolls.Item1 == rollValue || jobRolls.Item2 == rollValue)
-                {
-                    cash += game.board.JobIndexToMoney(jobIndex, 4);
-                }
-            }
-            else
-            {
-                //throw new NotImplementedException();
-            }
-        }
+
 
         public override void OnPostDiceRoll(Game game)
         {
@@ -150,7 +136,8 @@ namespace StockMarketGame
 
         public override void OnPreDiceRoll(Game game)
         {
-            if (atWork && cash > 1000) {
+            if (atWork && cash > 1000)
+            {
                 atWork = false;
             }
         }

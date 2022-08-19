@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 
-public class AIGameInteractionTests
+public class GenaricPlayerGameInteractionTests
 {
     [Test]
-    public void AIGainsMoneyOnTurnFromJob()
+    public void GainsMoneyOnTurnFromJob()
     {
         Game game = new(1000);
         AIPlayer player0 = new(0);
@@ -31,7 +31,7 @@ public class AIGameInteractionTests
     }
 
     [Test]
-    public void AILeavesJobWhenAtMoneyCap()
+    public void LeavesJobWhenAtMoneyCap()
     {
         Game game = new(10000);
         AIPlayer player0 = new(0);
@@ -40,9 +40,15 @@ public class AIGameInteractionTests
         {
             game.ExecuteNextTurn(new(1, 1));
         }
-        Assert.AreNotEqual(400*4, player0.GetMonataryValue());
+        Assert.AreNotEqual(400 * 4, player0.GetMonataryValue());
+    }
 
+    [Test]
+    public void GoesInCorrectDirectionOnGameStart()
+    {
 
     }
+
+
 }
 
