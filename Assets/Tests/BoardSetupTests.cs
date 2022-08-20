@@ -26,7 +26,7 @@ public class BoardSetupTests
     [Test]
     public void BoardHasExpectedFeeSquares()
     {
-        for (float i = 0; i < expectedBoardSize; i += 5.5f)
+        for (float i = 0; i < expectedBoardSize; i += 6f)
         {
             Assert.IsInstanceOf<Board.FeeSquare>(board.IndexToSquare(Mathf.CeilToInt(i)), "At " + Mathf.CeilToInt(i));
         }
@@ -44,7 +44,7 @@ public class BoardSetupTests
     [Test]
     public void CornerSquaresExitRight()
     {
-        for (int i = 5; i < expectedBoardSize; i += 11)
+        for (int i = 6; i < expectedBoardSize; i += 12)
         {
             Board.CornerSquare corner = (Board.CornerSquare)board.IndexToSquare(i);
             Player player = new AIPlayer(0);
@@ -56,7 +56,7 @@ public class BoardSetupTests
     [Test]
     public void StartSquaresExitLeftOnEvenRightOnOdd()
     {
-        for (int i = 11; i < expectedBoardSize; i += 11)
+        for (int i = 12; i < expectedBoardSize; i += 12)
         {
             Board.StartSquare corner = (Board.StartSquare)board.IndexToSquare(i);
             Player player = new AIPlayer(0);

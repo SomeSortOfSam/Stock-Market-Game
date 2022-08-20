@@ -101,11 +101,11 @@ namespace StockMarketGame
 
         public Square IndexToSquare(int index)
         {
-            if (index % 11 == 0)
+            if (index % 12 == 0)
             {
                 return new StartSquare();
             }
-            else if ((index - 6) % 11 == 0)
+            else if ((index - 6) % 12 == 0)
             {
                 return new CornerSquare();
             }

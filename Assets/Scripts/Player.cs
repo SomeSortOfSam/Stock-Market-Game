@@ -28,10 +28,10 @@ namespace StockMarketGame
 
         public void OnDiceRoll(Game game, Tuple<int, int> roll)
         {
+            int rollValue = roll.Item1 + roll.Item2;
             if (atWork)
             {
                 Tuple<int, int> jobRolls = game.board.JobIndexToAcceptedRolls(jobIndex);
-                int rollValue = roll.Item1 + roll.Item2;
                 if (jobRolls.Item1 == rollValue || jobRolls.Item2 == rollValue)
                 {
                     cash += game.board.JobIndexToMoney(jobIndex, 4);
@@ -39,7 +39,7 @@ namespace StockMarketGame
             }
             else
             {
-                //throw new NotImplementedException();
+                squareIndex = game.board.IndexToSquare(squareIndex).RollToIndex(this, rollValue);
             }
         }
 

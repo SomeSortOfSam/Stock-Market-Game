@@ -13,7 +13,7 @@ namespace StockMarketGame
             base.OnTickerTapeAnimationFinished(game);
             for (int i = 0; i < 48; i++)
             {
-                GameObject gameObject = new GameObject("Tile " + i, typeof(TextMeshProUGUI), typeof(Image));
+                GameObject gameObject = new GameObject("Tile " + i, typeof(Image), typeof(AspectRatioFitter));
                 Image image = gameObject.GetComponent<Image>();
                 Board.Square square = game.board.IndexToSquare(i);
                 switch (square)
@@ -29,9 +29,11 @@ namespace StockMarketGame
                         break;
                     case Board.NamedSquare n:
                         image.color = Color.green;
-                        gameObject.GetComponent<TextMeshProUGUI>().text = n.directionIsRight ? "-->" : "<--";
+                        //gameObject.GetComponent<TextMeshProUGUI>().text = n.directionIsRight ? "-->" : "<--";
                         break;
                 }
+                gameObject.GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
+                gameObject.transform.SetParent(tickerTapeTargetTransform);
 
             }
         }
