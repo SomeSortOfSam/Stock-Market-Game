@@ -50,16 +50,31 @@ public class GenaricPlayerGameInteractionTests
         AIPlayer player0 = new(0);
         AIPlayer player1 = new(0);
         player0.squareIndex = 12;
+        player1.squareIndex = 12;
         game.players.Add(player0);
         game.players.Add(player1);
         for (int i = 0; i < 4; i++)
         {
             game.ExecuteNextTurn(new(1, 1));
         }
-        Assert.Greater(12, player1.squareIndex);
+        Assert.Greater(player1.squareIndex, 12);
         game.ExecuteNextTurn(new(1, 2));
-        Assert.Less(12, player0.squareIndex);
+        Assert.Less(player0.squareIndex, 12);
     }
 
+    [Test]
+    public void NegitiveMovementOverflowsSquareIndex()
+    {
+        Game game = new(10000);
+        AIPlayer player0 = new(1);
+        player0.squareIndex = 0;
+        game.players.Add(player0);
+        for (int i = 0; i < 5; i++)
+        {
+            game.ExecuteNextTurn(new(1, 2));
+        }
+        Assert.Greater(player0.squareIndex, 0);
+        Assert.Greater(player0.squareIndex, 3*12);
+    }
 }
 

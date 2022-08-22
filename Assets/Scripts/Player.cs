@@ -18,7 +18,13 @@ namespace StockMarketGame
             get;
             protected set;
         }
-        public int squareIndex;
+        private int _squareIndex;
+        public int squareIndex
+        {
+            get => _squareIndex;
+            set { _squareIndex = ((value %= 48) < 0) ? value + 48 : value; }
+        }
+
         public int GetMonataryValue()
         {
             return cash;

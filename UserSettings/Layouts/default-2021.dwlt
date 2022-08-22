@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1280
     height: 941
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Test Runner
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 193
+  controlID: 3
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 58
+  controlID: 28
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 62
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -444,9 +444,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6600000
-    m_LastClickedID: 24774
-    m_ExpandedIDs: 000000007c600000c860000000ca9a3b
+    m_SelectedIDs: 82600000
+    m_LastClickedID: 24706
+    m_ExpandedIDs: 000000007860000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -474,7 +474,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c600000
+    m_ExpandedIDs: 0000000078600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007676000060640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 24706
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 231
+    ID: 138
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -694,9 +694,9 @@ MonoBehaviour:
       uniqueId: '[Stock-Market-Game][suite]'
       name: Stock-Market-Game
       fullName: Stock-Market-Game
-      resultStatus: 2
-      duration: 0.1363929
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1202083
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -710,9 +710,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/Youtube&Deviantart/Documents/GitHub/Stock-Market-Game/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.0891899
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0673649
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -827,9 +827,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
       name: GenaricPlayerGameInteractionTests
       fullName: GenaricPlayerGameInteractionTests
-      resultStatus: 2
-      duration: 0.0857685
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0639691
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -844,7 +844,7 @@ MonoBehaviour:
       name: GainsMoneyOnTurnFromJob
       fullName: GenaricPlayerGameInteractionTests.GainsMoneyOnTurnFromJob
       resultStatus: 1
-      duration: 0.0382093
+      duration: 0.0371739
       messages: 
       output: 
       stacktrace: 
@@ -860,23 +860,11 @@ MonoBehaviour:
       uniqueId: Tests.dll/GenaricPlayerGameInteractionTests/[Tests][GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart]
       name: GoesInCorrectDirectionOnGameStart
       fullName: GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart
-      resultStatus: 2
-      duration: 0.0115172
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
+      resultStatus: 1
+      duration: 0.0076358
+      messages: 
       output: 
-      stacktrace: "  at StockMarketGame.Board.IndexToSquare (System.Int32 index)
-        [0x0001a] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Board.cs:114
-        \r\n  at StockMarketGame.Player.OnDiceRoll (StockMarketGame.Game game, System.Tuple`2[T1,T2]
-        roll) [0x00060] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Player.cs:42
-        \r\n  at StockMarketGame.Game.ExecuteNextTurn (System.Tuple`2[T1,T2] rollOverride)
-        [0x00067] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Game.cs:73
-        \r\n  at GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart
-        () [0x0005f] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Tests\\AIGameInteractionTests.cs:60
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -890,7 +878,7 @@ MonoBehaviour:
       name: LeavesJobWhenAtMoneyCap
       fullName: GenaricPlayerGameInteractionTests.LeavesJobWhenAtMoneyCap
       resultStatus: 1
-      duration: 0.0047649
+      duration: 0.0051214
       messages: 
       output: 
       stacktrace: 
@@ -902,35 +890,29 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
-    m_ResultText: "GoesInCorrectDirectionOnGameStart (0.012s)\n---\nSystem.IndexOutOfRangeException
-      : Index was outside the bounds of the array.\n---\nat StockMarketGame.Board.IndexToSquare
-      (System.Int32 index) [0x0001a] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Board.cs:114
-      \r\n  at StockMarketGame.Player.OnDiceRoll (StockMarketGame.Game game, System.Tuple`2[T1,T2]
-      roll) [0x00060] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Player.cs:42
-      \r\n  at StockMarketGame.Game.ExecuteNextTurn (System.Tuple`2[T1,T2] rollOverride)
-      [0x00067] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Game.cs:73
-      \r\n  at GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart
-      () [0x0005f] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Tests\\AIGameInteractionTests.cs:60
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0"
-    m_ResultStacktrace: "  at StockMarketGame.Board.IndexToSquare (System.Int32 index)
-      [0x0001a] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Board.cs:114
-      \r\n  at StockMarketGame.Player.OnDiceRoll (StockMarketGame.Game game, System.Tuple`2[T1,T2]
-      roll) [0x00060] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Player.cs:42
-      \r\n  at StockMarketGame.Game.ExecuteNextTurn (System.Tuple`2[T1,T2] rollOverride)
-      [0x00067] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Scripts\\Game.cs:73
-      \r\n  at GenaricPlayerGameInteractionTests.GoesInCorrectDirectionOnGameStart
-      () [0x0005f] in C:\\Users\\Youtube&Deviantart\\Documents\\GitHub\\Stock-Market-Game\\Assets\\Tests\\AIGameInteractionTests.cs:60
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 "
+    - id: 1011
+      uniqueId: Tests.dll/GenaricPlayerGameInteractionTests/[Tests][GenaricPlayerGameInteractionTests.NegitiveMovementOverflowsSquareIndex]
+      name: NegitiveMovementOverflowsSquareIndex
+      fullName: GenaricPlayerGameInteractionTests.NegitiveMovementOverflowsSquareIndex
+      resultStatus: 1
+      duration: 0.0355728
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][GenaricPlayerGameInteractionTests][suite]
+    m_ResultText: NegitiveMovementOverflowsSquareIndex (0.036s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 69f6c6ec
-      m_LastClickedID: -322505111
+      m_SelectedIDs: 68be3f11
+      m_LastClickedID: 289390184
       m_ExpandedIDs: 93438bb2e4c934e1e557abf7a747acfad5a14c099abb1114e8c848181079351c0f644020c38a4244151f1057ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0

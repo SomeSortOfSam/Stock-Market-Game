@@ -38,7 +38,7 @@ namespace StockMarketGame
 
             public override int RollToIndex(Player player, int rollValue)
             {
-                return (player.squareIndex + rollValue * (rollValue % 2 == 0 ? -1 : 1)) % (12 * 4);
+                return (player.squareIndex + rollValue * (rollValue % 2 == 0 ? 1 : -1));
             }
         }
 
@@ -51,7 +51,7 @@ namespace StockMarketGame
 
             public override int RollToIndex(Player player, int rollValue)
             {
-                return player.squareIndex + rollValue % (12 * 4);
+                return player.squareIndex + rollValue;
             }
         }
 
@@ -67,8 +67,10 @@ namespace StockMarketGame
 
             public override int RollToIndex(Player player, int rollValue)
             {
-                throw new NotImplementedException();
+                return player.squareIndex + rollValue * (directionIsRight ? 1 : -1);
             }
+
+
         }
 
         public class StockholderSquare : NamedSquare
@@ -111,7 +113,8 @@ namespace StockMarketGame
             }
             else
             {
-                NamedSquare square = squares[index - 1 - (index / 6)];
+                int squareIndex = (int)(index - (index / 5.5f) - 1);
+                NamedSquare square = squares[squareIndex];
                 if ((index - 3) % 6 == 0)
                 {
                     return new StockholderSquare(square);
